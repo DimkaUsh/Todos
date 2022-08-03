@@ -1,10 +1,30 @@
-.app {
+.App {
     max-width: 1080px;
+    margin: 0 auto;
 }
 
 .header {
-    background-color: #f44336;
     padding: 30px 40px;
     color: white;
     text-align: center;
-  }
+    background-color: #f44336;
+}
+
+.addForm{
+    display: flex;
+    width: 75%;
+    margin: 0 auto;
+    margin-top: 25px;
+    justify-content: space-between;
+}
+
+.inputWrapper{
+    width: 100%;
+}
+
+.input{
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px #262626 solid;
+}
