@@ -14,7 +14,6 @@ const TodoListItem = ( {className, item, ...props}) => {
     className={classes}
     {...props}
     >
-
         <Title Tag='h3'>{item.title}</Title>
         <Button className='btn-listItem'>x</Button>
     </li>
