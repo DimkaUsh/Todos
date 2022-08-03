@@ -1,0 +1,22 @@
+{
+    "todos": [
+        {
+            "title": "Купить хлеб",
+            "state": "fulfiled"
+        },
+        {
+            "title": "Сделать зарядку",
+            "state": "unfulfiled"
+        }
+    ],
+    "filters": [
+        {
+            "id": "fulfiled",
+            "title": "Выполнено"
+        }
+        {
+            "id": "unfulfiled",
+            "title": "Не выполнено"
+        }
+    ]
+  }
