@@ -1,8 +1,6 @@
-import React from 'react'
 import calssNames from 'classnames'
 
 const Input = ({ id, className, label, error, ...props}) => {
-
     const classes = calssNames(
         'input',
         className,
