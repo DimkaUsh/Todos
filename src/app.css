@@ -13,8 +13,7 @@
 .addForm{
     display: flex;
     width: 75%;
-    margin: 0 auto;
-    margin-top: 25px;
+    margin: 25px auto 0;
     justify-content: space-between;
 }
 
@@ -40,5 +39,52 @@
 }
 
 .btn:hover {
-    background-color: #bbb;
-  }
+    background-color: #f44336;
+    color: #fff;
+}
+
+.btn-listItem {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 12px 15px;
+    font-size: 19px;
+    border: none;
+    background: none;
+}
+
+.todoList{
+    display: flex;
+    width: 80%;
+    margin: 25px auto 0;
+    padding: 10px 15px;
+    list-style: none;
+    flex-direction: column;
+    gap: 5px;
+    background-color: #565656;
+}
+
+.listItem{
+    position: relative;
+    display: flex;
+    padding: 12px 50px;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.2s;
+    cursor: pointer;
+    background: #eee;
+}
+
+.listItem:hover{
+    background: #ddd;
+}
+
+.fulfilled {
+    background: #888;
+    color: #fff;
+    text-decoration: line-through;
+}
+
+.fulfilled:hover {
+    background: #888;
+}

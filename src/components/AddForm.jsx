@@ -20,7 +20,9 @@ const AddForm = () => {
                 e.preventDefault()
                 setValue('')
             }}
-        >Add</Button>
+        >
+            Add
+        </Button>
     </form>
   )
 }
