@@ -1,6 +1,15 @@
 .App {
+    display: flex;
     max-width: 1080px;
+    height: 100vh;
     margin: 0 auto;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.home{
+    position: relative;
+    height: 100%;
 }
 
 .header {
@@ -101,4 +110,11 @@
 
 .fulfilled:hover {
     background: #888;
+}
+
+.footer {
+    padding: 30px 40px;
+    color: white;
+    text-align: center;
+    background-color: #f44336;
 }

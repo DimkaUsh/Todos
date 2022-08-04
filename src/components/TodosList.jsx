@@ -5,6 +5,7 @@ import axios from 'axios'
 import { todosFetched, todoChange } from '../redux/slices/todosSlice'
 
 import TodoListItem from './TodoListItem'
+import Spinner from './UI/spinner/Spinner'
 
 const TodosList = () => {
   const dispatch = useDispatch();
@@ -20,7 +21,7 @@ useEffect(() => {
 }, [])
 
 if (fetchedStatus === 'loading') {
- return 'Загрузка...'
+ return <Spinner />
 } else if (fetchedStatus === 'error') {
   return 'Произошла ошибка попробуйте позже :('
 } else {

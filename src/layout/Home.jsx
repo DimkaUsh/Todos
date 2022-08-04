@@ -5,7 +5,7 @@ import Filters from '../components/Filters';
 
 const Home = () => {
   return (
-    <main>
+    <main className='home'>
       <AddForm></AddForm>
       <Filters></Filters>
       <TodosList></TodosList>

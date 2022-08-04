@@ -9,6 +9,16 @@
       "id": 2,
       "title": "Сделать зарядку",
       "fulfilled": true
+    },
+    {
+      "id": "08ca29da-60e3-4b38-beab-0a94080ba782",
+      "title": "Пробежка на улице",
+      "fulfilled": false
+    },
+    {
+      "id": "7fed8fca-db4b-43fd-8238-71d386a31fa4",
+      "title": "Написать MyToDoList",
+      "fulfilled": true
     }
   ],
   "filters": [
