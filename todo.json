@@ -8,7 +8,7 @@
     {
       "id": 2,
       "title": "Сделать зарядку",
-      "fulfilled": false
+      "fulfilled": true
     }
   ],
   "filters": [
@@ -17,11 +17,11 @@
       "title": "Все"
     },
     {
-      "id": "fulfilled",
+      "id": true,
       "title": "Выполнено"
     },
     {
-      "id": "unfulfilled",
+      "id": false,
       "title": "Не выполнено"
     }
   ]

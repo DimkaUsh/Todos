@@ -11,14 +11,17 @@ export const filtersFetched = createAsyncThunk(
 
 const initialState = {
     filters: [],
-    fetchedStatus: 'loading'
+    fetchedStatus: 'loading',
+    filterSelected: 'all',
 }
 
 const filtersSlice = createSlice({
     name: "filters",
     initialState,
     reducers: {
-        filtersSet: (state, action) => {state.filter = action.payload}
+        filterSelect: (state, action) => {
+            state.filterSelected = action.payload
+        }
     },
     extraReducers: {
         [filtersFetched.pending]: (state) => {
@@ -38,5 +41,5 @@ const {actions, reducer} = filtersSlice;
 
 export default reducer;
 export const {
-    filtersSet
+    filterSelect
 } = actions

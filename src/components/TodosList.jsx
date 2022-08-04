@@ -1,16 +1,22 @@
 import { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux/es/exports'
-import TodoListItem from './TodoListItem'
-import { todosFetched, todoChange } from '../redux/slices/todosSlice'
 import axios from 'axios'
 
+import { todosFetched, todoChange } from '../redux/slices/todosSlice'
+
+import TodoListItem from './TodoListItem'
 
 const TodosList = () => {
   const dispatch = useDispatch();
   const {todos, fetchedStatus} = useSelector(state => state.todos)
+  const { filterSelected } = useSelector(state => state.filters)
 
 useEffect(() => {
-  dispatch(todosFetched('http://localhost:3001/todos'))
+  let url = `http://localhost:3001/todos`
+  if (filterSelected !== 'all'){
+    url = url + `?fulfilled=${filterSelected}`
+  }
+  dispatch(todosFetched(url))
 }, [])
 
 if (fetchedStatus === 'loading') {
@@ -37,7 +43,7 @@ function renderList()  {
               key={item.id}
               item={item} 
               className = { item.fulfilled ? 'fulfilled' : ''}
-              onClick = {(event) => onItemClick(item)}
+              onClick = {() => onItemClick(item)}
             ></TodoListItem>
   })
 }
