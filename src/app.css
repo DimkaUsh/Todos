@@ -32,16 +32,24 @@
     margin-left: 2px;
     padding: 10px;
     font-size: 16px;
-    background: #d9d9d9;
+    background: #D9D9F0;
     transition: 0.3s;
     cursor: pointer;
     border: 1px #262626 solid;
 }
 
 .btn:hover {
-    background-color: #f44336;
+    background-color: #b3c1e6;
     color: #fff;
 }
+
+.active[disabled] {
+    opacity: 1;
+    color: #000000;
+    cursor: inherit;
+    color: #fff;
+    background-color: #788cc4;
+  }
 
 .btn-listItem {
     position: absolute;
@@ -51,6 +59,12 @@
     font-size: 19px;
     border: none;
     background: none;
+}
+
+.filters {
+    display: flex;
+    margin-top: 25px;
+    justify-content: center;
 }
 
 .todoList{

@@ -3,7 +3,7 @@
     {
       "id": 1,
       "title": "Купить хлеб",
-      "fulfilled": true
+      "fulfilled": false
     },
     {
       "id": 2,
@@ -12,6 +12,10 @@
     }
   ],
   "filters": [
+    {
+      "id": "all",
+      "title": "Все"
+    },
     {
       "id": "fulfilled",
       "title": "Выполнено"
