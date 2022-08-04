@@ -1,24 +1,24 @@
 {
-    "todos": [
-        {
-            "id": 1,
-            "title": "Купить хлеб",
-            "state": "fulfilled"
-        },
-        {
-            "id": 2,
-            "title": "Сделать зарядку",
-            "state": "unfulfilled"
-        }
-    ],
-    "filters": [
-        {
-            "id": "fulfilled",
-            "title": "Выполнено"
-        },
-        {
-            "id": "unfulfilled",
-            "title": "Не выполнено"
-        }
-    ]
+  "todos": [
+    {
+      "id": 1,
+      "title": "Купить хлеб",
+      "fulfilled": true
+    },
+    {
+      "id": 2,
+      "title": "Сделать зарядку",
+      "fulfilled": false
+    }
+  ],
+  "filters": [
+    {
+      "id": "fulfilled",
+      "title": "Выполнено"
+    },
+    {
+      "id": "unfulfilled",
+      "title": "Не выполнено"
+    }
+  ]
 }

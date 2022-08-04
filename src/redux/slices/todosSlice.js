@@ -18,7 +18,18 @@ const todosSlice = createSlice({
     name: "todos",
     initialState,
     reducers: {
-        todosSet: (state, action) => {state.filter = action.payload}
+        todoAdd: (state, action) => {
+          state.todos.push(action.payload)
+        },
+        todoDelete: (state, action) => {
+          state.todos = state.todos.filter(todo => {
+          return todo.id !== action.payload
+        })},
+        todoChange: (state, action) =>{
+          const todos = state.todos
+          const index = todos.findIndex(todo => todo.id === action.payload)
+          todos[index]['fulfilled'] = !todos[index]['fulfilled']
+        }
     },
     extraReducers: {
         [todosFetched.pending]: (state) => {
@@ -38,5 +49,7 @@ const {actions, reducer} = todosSlice;
 
 export default reducer;
 export const {
-    todosSet
+  todoAdd,
+  todoDelete,
+  todoChange
 } = actions

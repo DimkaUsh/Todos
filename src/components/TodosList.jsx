@@ -1,7 +1,9 @@
 import { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux/es/exports'
 import TodoListItem from './TodoListItem'
-import { todosFetched } from '../redux/slices/todosSlice'
+import { todosFetched, todoChange } from '../redux/slices/todosSlice'
+import axios from 'axios'
+
 
 const TodosList = () => {
   const dispatch = useDispatch();
@@ -23,12 +25,19 @@ if (fetchedStatus === 'loading') {
   )
 }
 
+function onItemClick(item) {
+  const fullfiled = item['fulfilled']
+  axios.patch(`http://localhost:3001/todos/${item.id}`, {fulfilled: !fullfiled})
+  dispatch(todoChange(item.id))
+}
+
 function renderList()  {
   return todos.map(item => {
     return <TodoListItem 
               key={item.id}
               item={item} 
-              className = {item.state === 'fulfilled' ? 'fulfilled' : ''}
+              className = { item.fulfilled ? 'fulfilled' : ''}
+              onClick = {(event) => onItemClick(item)}
             ></TodoListItem>
   })
 }
